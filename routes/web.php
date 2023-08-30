@@ -23,5 +23,6 @@ $router->get('recipe', [
 
 $router->get('recipe/{id}', 'RecipeController@show');
 $router->post('recipe', 'RecipeController@store');
+$router->put('recipe/{id}', 'RecipeController@update');
 $router->delete('recipe/{id}', 'RecipeController@destroy');
 

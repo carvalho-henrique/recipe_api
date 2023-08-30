@@ -28,6 +28,15 @@ class RecipeController extends Controller
         return $recipe;
     }
 
+    public function update($id, Request $request){
+        $recipe = Recipe::find($id);
+        $recipe->title = $request->title;
+        $recipe->description = $request->description;
+        $recipe->save();
+
+        return $recipe;
+    }
+
     public function destroy($id)
     {
         $recipe = Recipe::find($id);
